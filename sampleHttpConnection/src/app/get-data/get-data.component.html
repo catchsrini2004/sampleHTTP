@@ -1,0 +1,62 @@
+<div style="text-align: center">
+
+Employee Details 
+
+<button (click) = "loadData()" >Load Data </button>
+
+
+
+<hr>
+
+<table>
+
+  <tr>
+    <th>Name </th>
+    <th> Age</th>
+    <th> Position</th>
+
+  </tr>
+  <tr *ngFor="let data of empData ">
+
+    <td>{{data.name}}</td>
+    <td>{{data.age}}</td>
+    <td>{{data.position}}</td>
+
+  </tr>
+
+
+</table>
+
+</div>
+
+<button (click)="getData();"> Http Get  Call</button>
+
+
+<br>
+
+
+
+Enter User Details :
+
+<br>
+
+Title :  <input type="text" #title>
+
+<br>
+<br>
+
+body : <input type="text" #body>
+
+<br>
+<br>
+
+user ID : <input type="text" #userid>
+
+<br>
+<br>
+
+
+<button (click) = "create(title.value, body.value, userid.value)">Insert record </button>
+
+
+ 
